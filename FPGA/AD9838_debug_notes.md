@@ -6,6 +6,10 @@ us_logic用AD9838生成一定频率的脉冲，ad9838是一款DDS芯片。
 
 上位机软件刚启动，会通过spi总线给FPGA发送一个AD9838_INIT_REG消息，然后给AD9838_Controller module的引脚ad9838_init产生一个脉冲。
 
+从Datasheet得知，AD9838有一个略微复杂初始化流程：
+
+
+
 # AD9838 control bits 详解
 
 | Bit | Bit Name | Description                |
