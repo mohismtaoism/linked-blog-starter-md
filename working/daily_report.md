@@ -38,3 +38,62 @@ $$
 2. Verify the pedal's function.
 Questions:
 	1. 请提供屏幕供应商细节，并且诉我界面的美术资源怎么获取，比如那些警告界面？
+
+
+# 2025.09.15
+
+	1. Implementing and designing app_ui_protocol module to send the key information to Procision 1000;
+
+# 2025.09.16
+	1. Implementing Procision 1000's function to recieve data from serial port.
+	2. Parsing the data from the ligasure board in Procision 1000.
+
+# 2025.09.17
+	1. Debugging the CRC16 function on MainFrame software.
+	2. Update the CVSS report for BLSS.
+> It's so sucks. The CRC16 function did not work correctly. The Calculating results from two methods are different, and the same method in different platform also leads to different results.
+
+# 2025.09.18
+	1. Debugging CRC16 modbus algorithm.
+
+# 2025.09.22
+
+$$
+AP = \left( \frac{L_r I_{r_peak}^2}{B_{max} K_u J} \right)^{4/3} \quad (\text{cm}^4) 
+$$
+
+
+$$
+ N = \frac{L_r I_{r_peak}}{B_{max} A_e} \times 10^4
+$$
+
+
+$$
+A_w = I_{r_rms}/J
+$$
+
+$$
+P_{cu} = I_{r_rms}^2 \cdot R_{dc}
+$$
+
+$$
+( P_{core} \approx k \cdot f^\alpha B_{max}^\beta \cdot V_e )
+$$
+1.  The Ligasure mainframe ic10 UART protocol implementation.
+2.  The Ligasure mainframe ic10 UART protocol debugging.
+
+# 2025.09.28
+
+
+```bash
+CertUtil -hashfile data_009_4253.tar MD5
+CertUtil -hashfile data_009_4253.tar SHA1
+CertUtil -hashfile data_009_4253.tar SHA256
+CertUtil -hashfile data_014_4254.tar MD5
+CertUtil -hashfile data_014_4254.tar SHA1
+CertUtil -hashfile data_014_4254.tar SHA256
+```
+
+1. Technical support for the Brightness CVSS report.
+2. Debugging Ligasure function on Procision 1000.
+3. Try to optimize the RingWidget when activating the ligasure.
