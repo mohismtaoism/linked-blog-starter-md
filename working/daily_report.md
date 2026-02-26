@@ -420,3 +420,17 @@ eb 90 00 01 00 87 2c
 			}
 		}
 ```
+
+# 2026.02.24
+
+1. Debugging the rfid module for EMC pre-compliance tests.
+
+# 2026.02.25
+
+1. Split the serial port related codes from Ligasure UI.
+2. Implement SerialPortManager class.
+
+# 2026.02.26
+
+1. Let the LigasureShow widget only do ui's works, and using signals from SerialPortManager to change ligasure ui.
+2. Improve the cutting data files capturing mechanism.
