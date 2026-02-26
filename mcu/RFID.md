@@ -1,20 +1,27 @@
 # finding card
 
-  
-
 AA 41 00 06 10 00 00 00 00 01 FC 03
 
-  
+0x75
+0xd0
+0x00
+0x06
+0x10
+0x00
+0x00
+0x00
+0x00
+0x01
+0xfc
+0x03
+0x00
 
 # one time anti-collison
 
-  
-
 AA 42 00 06 10 00 00 00 00 00 FE 03
 
-  
-
 # one time choosing the card
+
 AA 43 00 09 10 00 00 00 00 88 04 4F CE FD 03
 
 # 2nd time anti-collision

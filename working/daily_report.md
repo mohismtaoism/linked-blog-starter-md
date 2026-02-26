@@ -4,7 +4,7 @@
 2.  Preparing LPC1114 pure-binary flashing solution and documents.
 
 $$
-\text{波特率} = \frac{\text{系统时钟频率}}{\text{分频系数}} 
+\text{波特率} = \frac{\text{系统时钟频率}}{\text{分频系数}}
 $$
 # 2025.09.08
 
@@ -59,7 +59,7 @@ Questions:
 # 2025.09.22
 
 $$
-AP = \left( \frac{L_r I_{r_peak}^2}{B_{max} K_u J} \right)^{4/3} \quad (\text{cm}^4) 
+AP = \left( \frac{L_r I_{r_peak}^2}{B_{max} K_u J} \right)^{4/3} \quad (\text{cm}^4)
 $$
 
 
@@ -97,3 +97,326 @@ CertUtil -hashfile data_014_4254.tar SHA256
 1. Technical support for the Brightness CVSS report.
 2. Debugging Ligasure function on Procision 1000.
 3. Try to optimize the RingWidget when activating the ligasure.
+
+# 2025.11.17
+
+1. Prepare software documents for Korea medical examination.
+2. Push srcs to git server.
+3. Analyze the pedal's release message issue.
+
+# 2025.11.18
+
+1. Answer questions from Korea teachers.
+2. Reading the DHF files.
+
+# 2025.11.19
+
+1. Study DHF files;
+2. Reading Insufflator source code.
+
+# 2025.11.20
+
+
+# 2025.11.21
+
+# 2025.11.24
+
+1. Travel to Changzhou;
+2. Learning Insufflator source code architecture.
+3. Learning source code from engineer from smartvein.
+
+# 2025.11.25
+
+1. Continue to learn source code.
+2. Take part in Insufflator training.
+
+# 2025.11.26
+
+1. 学习气腹机恒压力pid调节控制流程；
+2. 学习气腹机动态高压pid调节控制流程；
+3. 气腹机耗材组件一致性测试；
+
+> 那些回测 Backtrader`，或 `freqtrade类似这种开源
+
+# 2025.11.27
+
+1. 气腹机耗材组件一致性测试；
+2. target参数数组标定；
+
+# 2025.11.28
+
+1. 参与与思脉得会议讨论接下来的工作；
+2. 代码学习；
+
+# 2025.12.01
+
+1. New software version release;
+2. Prepare software releasing documents;
+
+# 2025.12.08
+
+1. 软件发布文档处理；
+2. ligasure 脚踏失效分析；
+
+# 2025.12.09
+
+1. NAS服务器调研；
+2. ligasure 板子脚踏失效分析；
+3. 宠物版手柄检测阻抗验证；
+
+# 2025.12.10
+
+1. NAS服务器调研；
+2. Cyclone IV FPGA 学习；
+3. ligasure 板子脚踏失效分析；
+
+# 2025.12.11
+
+1. ligasure 板子脚踏失效分析；
+2. Cyclone IV FPGA 学习；
+3. NAS服务器调研；
+
+# 2025.12.12
+
+1. ligasure 板子脚踏失效分析；
+2. Cyclone IV FPGA 学习；
+3. NAS服务器调研；
+
+## X
+
+1. Activate control.c OutputPower  这里面改能量减少：
+	```c
+	SetUS_Amp(real_amp / 4);
+	```
+2. Self-test control.c ScanFreq2
+   ```c
+   DACOutVol(45);
+   ```
+3. StartAutoFollow control.c
+   change the activating frequence.
+
+# 2025.12.15
+
+# 2025.12.16
+
+1. 组合逻辑电路在always块中用阻塞赋值"="；
+2. 时序电路在always块中用非阻塞赋值"<=";
+
+# 2025.12.22
+
+1. Advantech Core Board malfunction analyzing;
+2. Replace the Core Board for issued mainframe;
+3. Ligaure source code ic11 analyze;
+
+# 2025.12.23
+
+1. Ligaure source code ic11 analyze;
+2. Problematic mainframe issues analyzing;
+
+# 2025.12.24
+
+1. Do Pedal activating tests for 130nm, 230nm and 360nm scaples, and collecting logs;
+2. Taking part in the broken scaple issues meeting.
+
+# 2025.12.25
+
+1. Analyze the linear interpolation algorithm about the real current.
+	a. How to get the Current_Value table?
+	b. Vk = ( 500 - G_ram->Control_parameter.Dac_ic11_out ) * 0.2; why calculate the voltage like this?
+	c. get_needpower calculate the target power via the input the impedence.
+	d. Run_power_Get
+      	1. Using the desired voltage to calculate the impedence(*Rall*), then get the real impedence *Rwork* via Real_Impedance_Get
+		2. Then using "Rwork" to get the target power(get_needpower).
+2. Analyze the Pedal activating logs;
+
+# 2025.12.26
+
+1. Summary the activating algorithms flow chart.
+2. System tests's impedence calculation tests.
+
+# 2025.12.29
+
+1. Making Procision 1000 algorithm's flow chart;
+2. NAS Configuration for the Quality department;
+
+# 2025.12.30
+
+1. Assistanting Mr Huang to do void activating tests and collect failed logs;
+2. Installing matlab on my laptop.
+3. Assistanting Mr Zhu to do ssh commands.
+
+# 2025.01.05
+
+1. Trying to capture issued logs from some scapels with Taylor.
+2. Prepare for beijing working trip.
+
+# 2025.01.06
+
+1. Travel to Beijing;
+2. Verify the impedence calculation for verification team.
+
+# 2025.01.07
+
+1. Verify the impedence calculation for verification team.
+2. Doing impedence tests to choose the best method;
+3. Writing the Procision 1000 algorithm summary ppt;
+4. Take part in the broken scapel meeting in headquart.
+
+# 2026.01.07
+
+代码逻辑在 traceFrequency 函数中。
+核心方程：利用相位（Phi）和阻抗（R）通过多项式拟合计算频率偏差 $\Delta F$。
+安全机制：如果计算出的频率 $F$ 偏离初始频率太远（超过 frequency_down_offset 或 frequency_up_offset），算法会判定为“失锁”，强制重置频率并把电流拉低 (pull_flat = true)，防止硬件损坏。
+
+phase_offset 不是固定的。如果功率 $P_{avg} > 34$，Offset +1；如果 $P_{avg} < 32$，Offset -1。这是一种自适应机制，确保在不同负载下功率输出稳定。
+
+峰值检测 (mFindPeak)：利用 RealTimeTrendChecker 检查功率趋势。当检测到切割完成（功率或阻抗出现特定峰值变化）后，算法会主动降低目标电流 (t_current)，以保护刀头和组织。
+
+如果 $R_{ins} > 440$ 且 $|\Phi| > 35$，则判定为失谐，触发错误处理。
+
+
+meeting
+
+1. 代码点，与具体测试数据
+2. 强生对比 何时升降
+3. 标准测试环境：强生与普汇规格一样，一代二代杆
+4. 异常，出厂自检log，检查一致性，阻抗，相位，阻抗异常是否都导致相位异常
+z
+软件，某个错误发生，记录关键log
+
+01-06:48:53.680 [Warning]:[SystemTest::run:284]  i=0, code=0, min_imp=50.1726, freq=55460.5, cur=196
+
+
+# 2026.01.08
+
+1. Doing rfid tests for the new mainframe shell.
+2. Doing ligasure current calibration tests;
+
+# 2026.01.09
+
+1. Trying to use printf via jlink wires.
+2. Confirm the systemtest's impedence calculation solutions;
+3. Moving stuffs to the new spaces.
+
+# 2026.01.12
+
+1. Prepare the hardwares and softwares for the ligasure current calibrations.
+2. Calibrating the ligasure current table;
+
+# 2026.01.13
+
+1. Improve the detailed algorithm flowchart.
+2. Take part in the broken scapels confrence with Headquater's leaders.
+
+# 2026.01.14
+
+1. Calibrating the ligasure current table;
+2. Implementing the cutting logs chooing method.
+
+# 2026.01.15
+
+1. Prepare the Spanish temporary software release.
+2. Calibrating the ligasure current table;
+
+# 2026.01.16
+
+1. Calibrating the ligasure current table;
+2. Do new version software release.
+
+# 2026.01.19
+
+1. Calibrating the ligasure current table;
+2. Calibrating the ligasure voltage table;
+
+# 2026.01.20
+
+1. Calibrating the ligasure impedance table;
+2. Calibrating the ligasure voltage table;
+
+# 2026.01.21
+
+1. Put all things together to the mainframe.
+2. Pusing source code into the git server.
+
+# 2026.01.22
+
+1. PA8,PB13 do PWM to drive the power circuits.
+2. rfid module implementation.
+3. Integrated mainframe test.
+
+# 2026.01.23
+
+1. RDID module implemantation
+2.
+
+# 2026.01.26
+
+1. Implementing copying recent cutting logs and make related tar package.
+2. Trouble shooting for NAS device's malfciuntion, it maybe wire's issue.
+
+# 2026.01.27
+
+1. Taking parting the broken scapel's meeting.
+2. Setting up the envirnment for rfid tests.
+
+# 2026.01.28
+
+1. Implementing the app_rfid_queue module to recieve rfid data(Using ringbuffer internally);
+
+# 2026.01.28
+
+1. Designing a finite state machine to implement requesting the rfid card(including anti-collision, choosing chard, and the second anti-collision and choosing card)
+
+# 2026.01.30
+
+1. Continue to implemebnt this state machine.
+2. Fix the ui's typos.
+
+# 2026.02.02
+
+1. The rfid board is reversed, line order from up to down: Yellow, Orange, Red, Blue.
+2. The usb-serial port stick's chip side is showing: line order from up to down: Yellow, Orange, Red, Blue.
+
+The response: size=8: 0x55 0x00 0x00 0x02 0x44 0x00 0x13 0x03
+chiptype: 0x4400
+The response: size=8: 0x55 0x00 0x00 0x02 0x44 0x00 0x13 0x03
+The response: size=10: 0x55 0x00 0x00 0x04 0x88 0x04 0x56 0xce 0x45 0x03
+
+
+The response: size=6: 0x55 0xe5 0x00 0x00 0xb0 0x03
+The response: size=6: 0x55 0xe4 0x00 0x00 0xb1 0x03
+
+0x55 0xe3 0x00 0x00 0xb6 0x03
+
+I have finished the basic rfid module in stm32 dev board.
+
+# 2026.02.03
+
+1. Porting the rfid module to ic10;
+2. Adding related codes in ultrasurgery;
+
+# 2026.02.04
+
+1. Finalize the copying recent blades data feature.
+2.
+
+eb90000100
+
+eb 90 00 01 00 87 2c
+
+5541 - 2006 = 3535
+
+```c
+		for(i=0; i<len; i++)
+		{
+			USART_SendData(USART2, buf[i]);
+			while(USART_GetFlagStatus(USART2, USART_FLAG_TXE) == RESET )
+			{
+				j++;
+				if(j > 5000)
+				{
+					break;
+				}
+			}
+		}
+```
