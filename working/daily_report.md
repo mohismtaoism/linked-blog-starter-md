@@ -434,3 +434,61 @@ eb 90 00 01 00 87 2c
 
 1. Let the LigasureShow widget only do ui's works, and using signals from SerialPortManager to change ligasure ui.
 2. Improve the cutting data files capturing mechanism.
+
+# 2026.3.2
+
+1. Finding a way to print debug information under the case of without serial port.
+2. Calibrating the open circuit case and the short circuit case.
+
+# 2026.3.3
+
+After my diligent investigations, RTTE can use CMSIS dap burner to implement the printf function.
+
+# 2026.3.4
+
+1. Travel to Beijinig;
+2. Optimizing the handle's quality method, ready to using Phases variance to detect them;
+
+# 2026.3.5
+
+1. Take part in the broken scapel's meeting;
+2. Calibrating for ligasure's open circuit's judging conditions;
+3. Summaring the ligasure algorithm;
+
+# 2026.3.6
+
+1. Calibrating the ligasure function successfully.
+
+# 2026.3.9
+
+1. Redesign the communication protocol between the ARM linux and the ic10.
+2. Implement the ic10 side's communication
+
+# 2026.3.10
+
+1. Calibrate the current table;
+   a. Set the DAC to 350；
+   b. Then set the different impedance values, and read the currnet value from the source, and also read the current value from electrisurgical analyzer. Total 15 pairs data.
+
+2. Voltage table
+
+Set 50 100 150 200 250 300 350 400 450
+
+3. Impedance table
+
+4. Recalibrate the number 2's mainframe.
+
+# 2026.3.11
+
+1. Implement the qt side's new communication's architecture.
+2. Outline the open circuit error's corner cases.
+
+# 2026.3.12
+
+1. Debug the whole process between the arm linux and the ic10.
+2. Let the rfid only read once during boot.
+
+# 2026.3.13
+
+1. Debug the rfid module.
+2. Push all related source code into the git server.
